@@ -1,0 +1,18 @@
+name = "systeme-pro-livraison"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+[[kv_namespaces]]
+binding = "ENTITLEMENTS"
+id = "REMPLACER_PAR_ID_KV"
+
+[[r2_buckets]]
+binding = "PACKAGES"
+bucket_name = "systeme-pro-prive"
+
+# Secrets à ajouter avec wrangler secret put :
+# STRIPE_WEBHOOK_SECRET
+# STRIPE_SECRET_KEY
+# RESEND_API_KEY
+# FROM_EMAIL (adresse expéditrice vérifiée)
+# PUBLIC_WORKER_URL
