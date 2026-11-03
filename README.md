@@ -2,14 +2,18 @@
 
 Site : https://gillesgallon.github.io/Boutique--systeme-pro/
 
-## Catalogue
+## Catalogue — tarifs décidés le 3 novembre 2026
 
-| Produit | Prix affiché | Statut |
+| Produit | Prix public | Paiement |
 | --- | ---: | --- |
-| AMIGO SYSTÈME PRO | 35 € | Lien Stripe réel installé dans index.html |
-| TOTOCALCIO PRO | 39 € | Lien Stripe réel installé sur la fiche et l'accueil |
-| HIPPIQUE SYSTÈME PRO | 39 € | Le tarif Stripe actuellement constaté est 35 € ; créer un nouveau tarif à 39 € |
-| Pack des trois | 99 € | Produit et tarif Stripe à créer |
+| AMIGO SYSTÈME PRO | 49,90 € | Nouveau lien Stripe requis |
+| TOTOCALCIO PRO | 49,90 € | Nouveau lien Stripe requis |
+| HIPPIQUE SYSTÈME PRO | 49,90 € | Nouveau lien Stripe requis |
+| Pack des trois | 108 € | Produit, tarif et lien Stripe requis |
+
+Prix séparés totalisant 149,70 €, réduction pack de 41,70 €.
+
+Les anciens liens Stripe (35 € et 39 €) ne sont plus affichés comme boutons d'achat sur la boutique, car ils ne correspondent plus aux prix publics souhaités. Ils peuvent rester actifs dans le tableau de bord Stripe jusqu'à leur désactivation explicite et doivent être vérifiés avant diffusion.
 
 ## Sécurité de la livraison
 
@@ -37,10 +41,10 @@ Une page de remerciement statique seule ne prouve pas le paiement et ne doit pas
 
 Le fichier `index.html` contient la page publique. La branche principale est `main`. Les boutons non configurés restent désactivés pour éviter les achats trompeurs.
 
-## Liens connus
+## Liens précédemment utilisés (anciens tarifs, ne pas republier)
 
-- Stripe AMIGO (35 €) : https://buy.stripe.com/5kQdR92gk8a37Ma0Toa3u01
-- Stripe TOTOCALCIO (39 €) : https://buy.stripe.com/6oU28r08c4XRgiG59Ea3u02
-- Autre lien Stripe réel trouvé sur le compte : associé à HIPPIQUE **35 €**, ne pas utiliser pour le tarif boutique **39 €**.
+- AMIGO : ancien lien à 35 €.
+- TOTOCALCIO : ancien lien à 39 €.
+- HIPPIQUE : ancien lien à 35 € trouvé dans Stripe.
 
-Les informations de Stripe ci-dessus reflètent un contrôle ponctuel, à revérifier après modification des produits.
+Les nouveaux liens devront être vérifiés côté Stripe en mode réel avant publication.
