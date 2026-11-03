@@ -7,7 +7,7 @@ Site : https://gillesgallon.github.io/Boutique--systeme-pro/
 | Produit | Prix affiché | Statut |
 | --- | ---: | --- |
 | AMIGO SYSTÈME PRO | 35 € | Lien Stripe réel installé dans index.html |
-| TOTOCALCIO PRO | 39 € | Produit et tarif réel Stripe présents ; pas de lien validé |
+| TOTOCALCIO PRO | 39 € | Lien Stripe réel installé sur la fiche et l'accueil |
 | HIPPIQUE SYSTÈME PRO | 39 € | Le tarif Stripe actuellement constaté est 35 € ; créer un nouveau tarif à 39 € |
 | Pack des trois | 99 € | Produit et tarif Stripe à créer |
 
@@ -40,6 +40,7 @@ Le fichier `index.html` contient la page publique. La branche principale est `ma
 ## Liens connus
 
 - Stripe AMIGO (35 €) : https://buy.stripe.com/5kQdR92gk8a37Ma0Toa3u01
+- Stripe TOTOCALCIO (39 €) : https://buy.stripe.com/6oU28r08c4XRgiG59Ea3u02
 - Autre lien Stripe réel trouvé sur le compte : associé à HIPPIQUE **35 €**, ne pas utiliser pour le tarif boutique **39 €**.
 
 Les informations de Stripe ci-dessus reflètent un contrôle ponctuel, à revérifier après modification des produits.
