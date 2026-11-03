@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gillesgallon.github.io/Boutique--systeme-pro/sitemap.xml
