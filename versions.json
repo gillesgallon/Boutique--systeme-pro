@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "updated": "2026-11-03",
+  "policy": {
+    "free_updates_for_life": true,
+    "eligible": "Acheteurs détenteurs d'une licence SYSTÈME PRO valide",
+    "delivery": "privée après vérification de l'achat",
+    "public_downloads": false
+  },
+  "products": [
+    {
+      "id": "amigo",
+      "name": "AMIGO SYSTÈME PRO",
+      "latest_version": null,
+      "release_status": "à vérifier",
+      "changes": [],
+      "download_url": null
+    },
+    {
+      "id": "totocalcio",
+      "name": "TOTOCALCIO PRO",
+      "latest_version": "2.0.8",
+      "release_status": "version en ligne identifiée, archive commerciale à valider",
+      "changes": [],
+      "download_url": null
+    },
+    {
+      "id": "hippique",
+      "name": "HIPPIQUE SYSTÈME PRO",
+      "latest_version": null,
+      "release_status": "à vérifier",
+      "changes": [],
+      "download_url": null
+    }
+  ]
+}
