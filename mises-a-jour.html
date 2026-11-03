@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Suivi des versions et mises à jour gratuites à vie pour les acheteurs SYSTÈME PRO.">
+<title>Mises à jour gratuites à vie | SYSTÈME PRO</title>
+<style>
+:root{color-scheme:dark;--bg:#080d19;--panel:#142039;--line:#34435e;--text:#f5f7ff;--muted:#c4cee1;--gold:#ffd06a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+header,main,footer{padding:16px max(calc((100vw - 980px)/2),20px)}
+header{background:#111b2e;border-bottom:1px solid var(--line)}header a{color:var(--gold);text-decoration:none;font-weight:800}
+main{padding-top:38px;padding-bottom:46px}h1{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.2;margin:4px 0 10px}h2{font-size:1.25rem}
+.intro{color:var(--muted);max-width:720px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}.card h2{margin:0 0 12px}.tag{font-size:.8rem;color:#8de4ca;font-weight:800}.muted{color:var(--muted)}.warning{border-left:3px solid var(--gold);padding:9px 14px;background:#232439}
+label{display:block;font-weight:700;margin:0 0 5px}select,input{width:100%;border:1px solid #7585a5;background:#10192a;color:#fff;border-radius:8px;padding:10px;font:inherit}
+button{border:0;border-radius:9px;background:var(--gold);color:#101a30;font:inherit;font-weight:800;padding:11px 16px;cursor:pointer}
+.checker{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end}#result{min-height:1.8em;color:#e5ebf7}small{color:var(--muted)}
+footer{border-top:1px solid var(--line);color:var(--muted)}a{color:var(--gold)}:focus-visible{outline:3px solid #71e8f8;outline-offset:3px}
+@media(max-width:750px){.grid{grid-template-columns:1fr}.checker{grid-template-columns:1fr}}
+</style></head><body>
+<header><a href="index.html">← Boutique SYSTÈME PRO</a></header>
+<main><p class="tag">SERVICE CLIENTS</p><h1>Mises à jour gratuites à vie</h1>
+<p class="intro">Une seule acquisition, des améliorations gratuites pendant toute la vie commerciale de chaque logiciel, sans abonnement. Cette page indique les versions connues et prépare le suivi des mises à jour.</p>
+<div class="grid" id="products"><article class="card"><h2>AMIGO SYSTÈME PRO</h2><p class="muted">Version à confirmer</p></article><article class="card"><h2>TOTOCALCIO PRO</h2><p class="muted">Version 2.0.8 identifiée</p></article><article class="card"><h2>HIPPIQUE SYSTÈME PRO</h2><p class="muted">Version à confirmer</p></article></div>
+<section class="card"><h2>Vérifier ma version</h2><p class="muted">Saisissez le numéro de version affiché dans votre logiciel. Cet outil compare les numéros connus : il n'installe pas de fichiers.</p>
+<div class="checker"><div><label for="product">Mon logiciel</label><select id="product"><option value="amigo">AMIGO</option><option value="totocalcio">TOTOCALCIO PRO</option><option value="hippique">HIPPIQUE SYSTÈME PRO</option></select></div><div><label for="version">Version installée</label><input id="version" maxlength="32" placeholder="Ex. 2.0.7" autocomplete="off"></div><button id="check" type="button">Vérifier</button></div>
+<p id="result" role="status" aria-live="polite"></p></section>
+<section><h2>Comment recevoir les mises à jour ?</h2>
+<p>Les nouvelles versions seront réservées aux clients dont l'achat est confirmé. La livraison des fichiers se fera par un moyen privé. Aucun logiciel payant ne sera mis en téléchargement libre sur cette page.</p>
+<p class="warning"><strong>État actuel :</strong> le suivi des versions est créé. L'envoi automatique des fichiers, les notifications e-mail et l'identification des acheteurs ne sont pas encore activés. La livraison nécessite encore une intervention du vendeur.</p>
+<p>Les données de grilles et sauvegardes doivent être exportées avant toute installation. Le système devra être testé pour éviter leur perte.</p>
+</section><p><a href="livraison.html">Consulter les informations de livraison</a></p>
+</main><footer>© 2026 SYSTÈME PRO — Suivi public des versions, archives de vente conservées hors du site.</footer>
+<script>
+(async()=>{
+let products=null;
+try{
+ const response=await fetch("versions.json",{cache:"no-store"});
+ if(!response.ok)throw Error("indisponible");
+ const data=await response.json();products=Object.fromEntries(data.products.map(p=>[p.id,p]));
+ document.getElementById("products").replaceChildren(...data.products.map(p=>{
+  const a=document.createElement("article");a.className="card";
+  const h=document.createElement("h2");h.textContent=p.name;
+  const v=document.createElement("p");v.className="tag";v.textContent=p.latest_version?"Version connue : "+p.latest_version:"Version à confirmer";
+  const s=document.createElement("p");s.className="muted";s.textContent=p.release_status;
+  a.append(h,v,s);return a;
+ }));
+}catch(err){document.getElementById("result").textContent="Le catalogue des versions n'est pas disponible pour le moment."}
+document.getElementById("check").addEventListener("click",()=>{
+ const p=products?.[document.getElementById("product").value];
+ const own=document.getElementById("version").value.trim().replace(/^v/i,"");
+ const out=document.getElementById("result");
+ if(!p){out.textContent="Catalogue indisponible : réessayez plus tard.";return}
+ if(!own){out.textContent="Indiquez d'abord votre numéro de version.";return}
+ if(!p.latest_version){out.textContent="La version officielle n'est pas encore validée. Aucun téléchargement automatique n'est disponible.";return}
+ const parts=v=>v.split(".").map(x=>/^\d+$/.test(x)?Number(x):NaN);
+ const a=parts(own),b=parts(p.latest_version);
+ if(a.some(Number.isNaN)||a.length>4){out.textContent="Numéro de version non reconnu. Exemple : 2.0.8";return}
+ let cmp=0;for(let i=0;i<Math.max(a.length,b.length);i++){let d=(a[i]||0)-(b[i]||0);if(d){cmp=d;break}}
+ out.textContent=cmp<0?"Une version plus récente est référencée ("+p.latest_version+"). La demande de mise à jour passe pour l'instant par le vendeur.":cmp===0?"Votre numéro correspond à la dernière version référencée ("+p.latest_version+").":"Votre numéro est plus récent que la version actuellement référencée. Vérifiez auprès du vendeur.";
+});
+})();
+</script></body></html>
