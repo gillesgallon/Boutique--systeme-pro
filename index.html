@@ -21,8 +21,534 @@ main{overflow:hidden}.hero{position:relative;padding:80px 0 95px;background:radi
 @media(max-width:700px){.topbar{font-size:9px;letter-spacing:.08em}.header-in{height:68px}.brandtxt{font-size:17px}.nav a:not(.nav-cta){display:none}.hero{padding:43px 0 52px}.hero-in{grid-template-columns:1fr;gap:39px}.hero h1{font-size:clamp(43px,10vw,64px);max-width:610px}.hero-show{width:100%}.hero-frame{aspect-ratio:1.19}.hero-float{left:20px;right:18px;bottom:22px}.hero-float strong{font-size:25px}.section{padding:68px 0}.section-top{margin-bottom:32px}.products{grid-template-columns:1fr;max-width:480px;margin:auto;gap:24px}.photo{aspect-ratio:1.35}.product-body{padding:25px}.product-body h3{font-size:27px}.tagline{min-height:0}.featureband{grid-template-columns:1fr;margin-top:45px}.feature+.feature{border-left:none;border-top:1px solid #ffffff1d}.feature{padding:22px}.aboutin{grid-template-columns:1fr;gap:28px}.endcta{margin-bottom:45px}.footerin{flex-direction:column;align-items:flex-start}.modalcontent{padding:4px 21px 25px}.modalphoto{height:210px}.modalcontent h2{font-size:31px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
+
+<style id="nova-modernisation">
+body {
+  background: linear-gradient(135deg,#070e20,#14294b) !important;
+  color: #f5f8ff !important;
+  font-family: Arial, sans-serif !important;
+}
+h1,h2,h3 {
+  letter-spacing: -.5px;
+}
+article,.card,.product-card {
+  border-radius: 18px !important;
+  transition: transform .25s, box-shadow .25s;
+}
+article:hover,.card:hover,.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px #0005;
+}
+button,a.button {
+  border-radius: 12px !important;
+}
+</style>
+
+
+<style id="nova-fiches-pro">
+.product-amigo,.product-hippique,.product-toto {
+  position:relative;
+  overflow:hidden;
+  border:1px solid #ffffff25 !important;
+  border-radius:22px !important;
+  background:linear-gradient(145deg,#152744,#091426) !important;
+  box-shadow:0 12px 35px #0005;
+}
+.product-amigo {--accent:#36c5ff}
+.product-hippique {--accent:#ffbf59}
+.product-toto {--accent:#91e5a8}
+.product-amigo h2,.product-hippique h2,.product-toto h2 {
+  color:var(--accent) !important;
+}
+.product-amigo img,.product-hippique img,.product-toto img {
+  max-width:100%;
+  border-radius:14px;
+  object-fit:cover;
+}
+.product-amigo a,.product-hippique a,.product-toto a {
+  transition:transform .2s,filter .2s;
+}
+.product-amigo a:hover,.product-hippique a:hover,.product-toto a:hover {
+  transform:scale(1.03);
+  filter:brightness(1.15);
+}
+@media(max-width:700px){
+  .product-amigo,.product-hippique,.product-toto {
+    padding:16px !important;
+  }
+}
+</style>
+
+
+<style id="nova-amigo-boules">
+.product-amigo {
+  background:
+    radial-gradient(circle at 15% 15%,#167bba66,transparent 45%),
+    linear-gradient(145deg,#102946,#081221) !important;
+}
+.product-amigo::before {
+  content:"";
+  display:block;
+  height:90px;
+  margin-bottom:12px;
+  border-radius:16px;
+  background:
+    radial-gradient(circle at 12% 50%,#fff 0 7px,#12b9f7 8px 23px,transparent 24px),
+    radial-gradient(circle at 37% 50%,#fff 0 7px,#ffd23f 8px 23px,transparent 24px),
+    radial-gradient(circle at 62% 50%,#fff 0 7px,#12b9f7 8px 23px,transparent 24px),
+    radial-gradient(circle at 87% 50%,#fff 0 7px,#ffd23f 8px 23px,transparent 24px),
+    linear-gradient(135deg,#173b65,#07182c);
+}
+</style>
+
+
+<style id="nova-hippique-pro">
+.product-hippique {
+  background:
+    radial-gradient(circle at 80% 10%,#bd762b44,transparent 45%),
+    linear-gradient(145deg,#30251c,#101825) !important;
+}
+.product-hippique::before {
+  content:"🏇  GRAND PRIX  •  HIPPIQUE SYSTÈME PRO";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:90px;
+  margin-bottom:12px;
+  padding:12px;
+  border-radius:16px;
+  background:linear-gradient(120deg,#604025,#17263d);
+  color:#ffe2a0;
+  font-size:clamp(12px,2vw,18px);
+  font-weight:bold;
+  letter-spacing:1px;
+  text-align:center;
+  box-sizing:border-box;
+}
+</style>
+
+
+<style id="nova-totocalcio-pro">
+.product-toto {
+  background:
+    radial-gradient(ellipse at 50% 0%,#26a97055,transparent 65%),
+    linear-gradient(145deg,#102f35,#091525) !important;
+}
+.product-toto::before {
+  content:"⚽  TOTOCALCIO PRO  •  FOOTBALL";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:90px;
+  margin-bottom:12px;
+  padding:12px;
+  border-radius:16px;
+  background:
+    radial-gradient(ellipse at 50% 100%,#238c63,#102943 75%);
+  color:#e1ffed;
+  font-size:clamp(14px,2vw,20px);
+  font-weight:800;
+  letter-spacing:1px;
+  text-align:center;
+  box-sizing:border-box;
+}
+.product-toto:hover {
+  box-shadow:0 18px 45px #27d69a33 !important;
+}
+</style>
+
+
+<style id="nova-finition">
+* { box-sizing: border-box; }
+
+.product-amigo,.product-hippique,.product-toto {
+  padding: 22px !important;
+}
+
+.product-amigo h2,.product-hippique h2,.product-toto h2 {
+  font-size: clamp(19px,2.5vw,25px) !important;
+  line-height: 1.25;
+}
+
+.product-amigo p,.product-hippique p,.product-toto p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a[href*="buy.stripe.com"] {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 12px !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media(max-width:600px) {
+  .product-amigo,.product-hippique,.product-toto {
+    padding: 15px !important;
+  }
+  a[href*="buy.stripe.com"] {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+</style>
+
+
+<style id="nova-premium-header">
+body{
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,215,80,.18), transparent 18%),
+    radial-gradient(circle at 85% 20%, rgba(80,160,255,.18), transparent 20%),
+    linear-gradient(135deg,#071226 0%,#0b1d3a 45%,#09162a 100%) !important;
+  color:#f5f7ff !important;
+}
+
+.nova-hero{
+  max-width:1200px;
+  margin:24px auto 28px auto;
+  padding:26px 18px 18px 18px;
+  border-radius:24px;
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+  text-align:center;
+}
+
+.nova-hero-title{
+  margin:0;
+  font-size:clamp(34px,6vw,72px);
+  line-height:1;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#ffffff;
+  text-shadow:0 4px 14px rgba(0,0,0,.45);
+}
+
+.nova-hero-title .pro{
+  color:#f1c550;
+}
+
+.nova-hero-sub{
+  margin:10px 0 18px 0;
+  font-size:clamp(16px,2.1vw,28px);
+  letter-spacing:2px;
+  color:#eef4ff;
+  opacity:.96;
+  text-transform:uppercase;
+}
+
+.nova-hero-strip{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin:16px auto 0 auto;
+  padding:14px 18px;
+  border-radius:16px;
+  background:linear-gradient(90deg,#c99624,#f0d67f,#c99624);
+  color:#111827;
+  font-weight:900;
+  font-size:clamp(18px,2.4vw,34px);
+  box-shadow:0 10px 24px rgba(0,0,0,.28);
+}
+
+.nova-hero-strip span{
+  white-space:nowrap;
+}
+
+@media(max-width:680px){
+  .nova-hero{
+    margin:16px 10px 20px 10px;
+    padding:18px 12px 14px 12px;
+  }
+  .nova-hero-strip{
+    gap:10px;
+    font-size:20px;
+  }
+}
+</style>
+
+
+<style id="nova-cartes-premium">
+.product-amigo,.product-hippique,.product-toto {
+  position:relative;
+  border-radius:22px !important;
+  padding:20px !important;
+  overflow:hidden;
+  border:1px solid #ffffff40 !important;
+  box-shadow:0 16px 35px #0007 !important;
+  transition:transform .3s,box-shadow .3s;
+}
+.product-amigo:hover,.product-hippique:hover,.product-toto:hover {
+  transform:translateY(-5px);
+  box-shadow:0 24px 48px #0009 !important;
+}
+.product-amigo {--accent:#39beff}
+.product-hippique {--accent:#f5c76d}
+.product-toto {--accent:#83e6b7}
+.product-amigo img,.product-hippique img,.product-toto img {
+  width:100%;
+  max-height:250px;
+  object-fit:cover;
+  border-radius:14px;
+}
+.product-amigo h2,.product-hippique h2,.product-toto h2 {
+  font-weight:900 !important;
+  text-transform:uppercase;
+  color:var(--accent) !important;
+}
+.product-amigo a[href*="stripe"],
+.product-hippique a[href*="stripe"],
+.product-toto a[href*="stripe"] {
+  background:linear-gradient(180deg,#ffe998,#d9a42e) !important;
+  color:#142033 !important;
+  border:1px solid #fff0b0 !important;
+  border-radius:12px !important;
+  text-align:center;
+  font-weight:800;
+}
+@media(max-width:650px){
+  .product-amigo,.product-hippique,.product-toto {
+    padding:14px !important;
+  }
+}
+</style>
+
+
+<style id="nova-format-standard">
+/* Largeur générale */
+body {
+  font-size:14px !important;
+}
+
+main,.container,.wrapper {
+  max-width:1120px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* En-tête compact */
+.nova-hero {
+  max-width:1100px !important;
+  margin:12px auto 18px !important;
+  padding:16px !important;
+}
+
+.nova-hero-title {
+  font-size:clamp(26px,4vw,46px) !important;
+}
+
+.nova-hero-sub {
+  font-size:clamp(11px,1.4vw,15px) !important;
+  margin:7px 0 !important;
+}
+
+.nova-hero-strip {
+  padding:8px !important;
+  font-size:clamp(12px,1.6vw,18px) !important;
+}
+
+/* Fiches compactes */
+.product-amigo,
+.product-hippique,
+.product-toto {
+  padding:14px !important;
+  border-radius:14px !important;
+}
+
+.product-amigo::before,
+.product-hippique::before,
+.product-toto::before {
+  min-height:50px !important;
+  height:auto !important;
+  margin-bottom:8px !important;
+}
+
+.product-amigo img,
+.product-hippique img,
+.product-toto img {
+  max-height:150px !important;
+  object-fit:cover;
+}
+
+.product-amigo h2,
+.product-hippique h2,
+.product-toto h2 {
+  font-size:18px !important;
+  margin:8px 0 !important;
+}
+
+.product-amigo p,
+.product-hippique p,
+.product-toto p {
+  font-size:13px !important;
+  line-height:1.4 !important;
+  margin:6px 0 !important;
+}
+
+a[href*="buy.stripe.com"] {
+  padding:10px 14px !important;
+  font-size:13px !important;
+}
+
+/* Téléphone */
+@media(max-width:650px) {
+  .nova-hero {margin:8px !important}
+  .nova-hero-title {font-size:28px !important}
+  .product-amigo,
+  .product-hippique,
+  .product-toto {padding:12px !important}
+}
+</style>
+
+
+<style id="nova-titres-compacts">
+/* Grand titre NOVA */
+.nova-hero-title {
+  font-size: clamp(24px,3vw,36px) !important;
+  line-height: 1.15 !important;
+}
+
+/* Sous-titre */
+.nova-hero-sub {
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+}
+
+/* Bandeau des trois logiciels */
+.nova-hero-strip {
+  font-size: 14px !important;
+  padding: 7px 12px !important;
+}
+
+/* Titres des fiches */
+.product-amigo h1,.product-amigo h2,
+.product-hippique h1,.product-hippique h2,
+.product-toto h1,.product-toto h2 {
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+  margin: 6px 0 !important;
+}
+
+/* Titres généraux */
+main h2,section h2 {
+  font-size: 18px;
+}
+
+/* Téléphone */
+@media(max-width:650px) {
+  .nova-hero-title {
+    font-size: 24px !important;
+  }
+  .nova-hero-strip {
+    font-size: 12px !important;
+    gap: 6px !important;
+  }
+}
+</style>
+
+
+<style id="nova-ultra-compact">
+/* Format général */
+body {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+main, .container, .wrapper {
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* En-tête réduit */
+.nova-hero {
+  padding: 10px 14px !important;
+  margin: 8px auto 14px !important;
+}
+.nova-hero-title {
+  font-size: 25px !important;
+}
+.nova-hero-sub {
+  font-size: 11px !important;
+  margin: 4px 0 !important;
+}
+.nova-hero-strip {
+  font-size: 12px !important;
+  padding: 5px !important;
+  margin-top: 6px !important;
+}
+
+/* Tous les titres */
+h1 { font-size: 25px !important; }
+h2 { font-size: 17px !important; }
+h3 { font-size: 14px !important; }
+
+/* Fiches produits */
+.product-amigo,
+.product-hippique,
+.product-toto {
+  padding: 12px !important;
+  margin: 5px 0 !important;
+  border-radius: 12px !important;
+}
+
+/* Images */
+.product-amigo img,
+.product-hippique img,
+.product-toto img {
+  max-height: 115px !important;
+  object-fit: cover !important;
+}
+
+/* Bandeaux décoratifs */
+.product-amigo::before,
+.product-hippique::before,
+.product-toto::before {
+  height: 40px !important;
+  min-height: 40px !important;
+  font-size: 11px !important;
+  margin-bottom: 5px !important;
+}
+
+/* Paragraphes */
+p {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+/* Boutons */
+a[href*="buy.stripe.com"] {
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+}
+
+/* Adaptation téléphone */
+@media(max-width:650px) {
+  .nova-hero-title {font-size:22px !important;}
+  h1 {font-size:22px !important;}
+  h2 {font-size:16px !important;}
+}
+</style>
+
 </head>
 <body>
+
+<section class="nova-hero" id="nova-hero-premium">
+  <h1 class="nova-hero-title">NOVA SYSTÈMES <span class="pro">PRO</span></h1>
+  <div class="nova-hero-sub">LOGICIELS PROFESSIONNELS DE PRONOSTICS</div>
+  <div class="nova-hero-strip">
+    <span>AMIGO</span>
+    <span>•</span>
+    <span>HIPPIQUE</span>
+    <span>•</span>
+    <span>TOTOCALCIO</span>
+  </div>
+</section>
+
+
 <a class="skip" href="#logiciels">Aller aux logiciels</a>
 <div class="topbar">Les outils de votre passion · 3 logiciels à découvrir</div>
 <header class="header"><div class="wrap header-in"><a class="brand" href="#accueil" aria-label="Système Pro, accueil"><span class="emblem">S</span><span class="brandtxt">SYSTÈME PRO<small>UNIVERS LOGICIELS</small></span></a><nav class="nav" aria-label="Navigation"><a href="#logiciels">Les logiciels</a><a href="#concept">Notre concept</a><a href="#questions">Questions</a><a href="#logiciels" class="nav-cta">Découvrir ↗</a></nav></div></header>
