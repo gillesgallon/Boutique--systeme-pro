@@ -27,15 +27,11 @@
     {
       "id": "hippique",
       "name": "HIPPIQUE SYSTÈME PRO",
-      "latest_version": "2026.11.4",
-      "release_status": "Archive de livraison préparée ; livraison privée après achat",
+      "latest_version": "2026.11.04.1",
+      "release_status": "disponible en livraison privée après vérification de l'achat",
       "changes": [
-        "Présentation harmonisée sur toutes les pages",
-        "Tête de cheval dans chaque groupe A à J et ronds des numéros jaune Ferrari",
-        "Base fixe vert pomme",
-        "Groupes A à E et F à J, jusqu’à 18 partants et 25 tickets selon les sélections",
-        "Consultation ticket par ticket, conditions et réducteur",
-        "Français, italien, espagnol, allemand et anglais"
+        "Ronds des groupes en jaune Ferrari.",
+        "Ajout d'une tête de cheval dans chaque groupe."
       ],
       "download_url": null
     }
