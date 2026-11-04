@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "policy": {
     "free_updates_for_life": true,
     "eligible": "Acheteurs détenteurs d'une licence SYSTÈME PRO valide",
@@ -27,9 +27,14 @@
     {
       "id": "hippique",
       "name": "HIPPIQUE SYSTÈME PRO",
-      "latest_version": null,
-      "release_status": "à vérifier",
-      "changes": [],
+      "latest_version": "2026.11.4",
+      "release_status": "Archive de livraison préparée ; livraison privée après achat",
+      "changes": [
+        "Base fixe vert pomme",
+        "Groupes A à E et F à J, jusqu’à 18 partants et 25 tickets selon les sélections",
+        "Consultation ticket par ticket, conditions et réducteur",
+        "Français, italien, espagnol, allemand et anglais"
+      ],
       "download_url": null
     }
   ]
