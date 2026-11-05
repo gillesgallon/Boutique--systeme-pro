@@ -27,9 +27,10 @@
     {
       "id": "hippique",
       "name": "HIPPIQUE SYSTÈME PRO",
-      "latest_version": "2026.11.05.1",
+      "latest_version": "2026.11.05.2",
       "release_status": "disponible en livraison privée après vérification de l'achat",
       "changes": [
+        "Nouvelle icône de bureau vert et or HIPPIQUE SYSTÈME PRO, intégrée à l’installateur Fedora.",
         "Navigation simplifiée, onglet Mon budget et propositions de systèmes selon la mise.",
         "Système à quatre lignes ABCD / EFGH / IJKL / MNOP et base fixe, groupes de 1 à 3 chevaux.",
         "Tickets vert foncé dans Mes tickets, lecture tous ensemble ou un par un.",
