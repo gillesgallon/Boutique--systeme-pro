@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "policy": {
     "free_updates_for_life": true,
     "eligible": "Acheteurs détenteurs d'une licence SYSTÈME PRO valide",
@@ -27,11 +27,14 @@
     {
       "id": "hippique",
       "name": "HIPPIQUE SYSTÈME PRO",
-      "latest_version": "2026.11.04.1",
+      "latest_version": "2026.11.05.1",
       "release_status": "disponible en livraison privée après vérification de l'achat",
       "changes": [
-        "Ronds des groupes en jaune Ferrari.",
-        "Ajout d'une tête de cheval dans chaque groupe."
+        "Navigation simplifiée, onglet Mon budget et propositions de systèmes selon la mise.",
+        "Système à quatre lignes ABCD / EFGH / IJKL / MNOP et base fixe, groupes de 1 à 3 chevaux.",
+        "Tickets vert foncé dans Mes tickets, lecture tous ensemble ou un par un.",
+        "Arrivée en saisie manuelle selon le pari et comparaison des tickets.",
+        "Message de félicitations après confirmation du gain par l’utilisateur."
       ],
       "download_url": null
     }
