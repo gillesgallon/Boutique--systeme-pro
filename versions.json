@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "policy": {
     "free_updates_for_life": true,
     "eligible": "Acheteurs détenteurs d'une licence SYSTÈME PRO valide",
@@ -11,9 +11,15 @@
     {
       "id": "amigo",
       "name": "AMIGO SYSTÈME PRO",
-      "latest_version": null,
-      "release_status": "à vérifier",
-      "changes": [],
+      "latest_version": "2026.11.06.7",
+      "release_status": "version en ligne actualisée ; archive commerciale à valider",
+      "changes": [
+        "Interface mobile adaptée et navigation par onglets.",
+        "Systèmes par groupes avec réglage des lignes et des groupes.",
+        "Saisie des numéros dans des cercles rouges, reliée automatiquement au bulletin.",
+        "Conditions de développement personnalisables et combinaisons uniques.",
+        "Sauvegarde des sélections, groupes et conditions sur l’appareil."
+      ],
       "download_url": null
     },
     {
